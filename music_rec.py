@@ -1,7 +1,7 @@
 
-print("Welcome to the music recommendation questionare!")
+print("\nWelcome to the music recommendation questionare!\nAnswer A, B, or C or type 'help' for instructions.")
 
-p1 = 0  #A enegertic
+p1 = 0  #A energetic  |  genres: edm
 p2 = 0  #B calm
 p3 = 0  #C melancholy
 
@@ -28,7 +28,7 @@ while counter < 10:
 
     #Question 2 - When do you mostly listen to music? - (bus ride, gym, sleep)
     q2 = input("\nWhen do you mostly listen to music?\na) Bus/Car ride\nb) Gym\nc) Sleep\n")
-    lq2 = q1.lower()
+    lq2 = q2.lower()
     if lq2 == "a":
         p3 += 1
     elif lq2 == "b":
