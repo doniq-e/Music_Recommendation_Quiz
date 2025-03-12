@@ -26,17 +26,15 @@ while counter < 10:
 
 
 
-
-
     #Question 2 - When do you mostly listen to music? - (bus ride, gym, sleep)
-    q2 = input("\nHow do you like to feel when you listen to music?\na) Energetic\nb) Calm\nc) Melancholy\n")
+    q2 = input("\nWhen do you mostly listen to music?\na) Bus/Car ride\nb) Gym\nc) Sleep\n")
     lq2 = q1.lower()
     if lq2 == "a":
-        p1 += 1
-    elif lq2 == "b":
-        p2 += 1
-    elif lq2 == "c":
         p3 += 1
+    elif lq2 == "b":
+        p1 += 1
+    elif lq2 == "c":
+        p2 += 1
     elif lq2 == "help":
         print(
             "\n                       ~ HELP ~\n~ We will ask you a few questions about your music interests.\n~ Type your answer to the questions by inputting A, B or C.\n~ We will then recommend music genres and music artists we think you will like!")
@@ -49,4 +47,13 @@ while counter < 10:
 
 
     counter+=1
+
+'''
+if p1 is great
+
+finalscorelist = [p1,p2,p3]
+
+max(finalscorelist)
+
+'''
 
