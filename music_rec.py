@@ -1,6 +1,6 @@
 print("\nWelcome to the music recommendation quiz!\nAnswer A, B, C, or type 'help' for instructions.")
 
-p1 = 0  #A energetic  |  genres: edm
+p1 = 0  #A energetic
 p2 = 0  #B calm
 p3 = 0  #C melancholy
 
@@ -10,59 +10,61 @@ counter = 0
 def help_menu():
     print("\n                       ~ HELP ~\n~ We will ask you a few questions about your music interests.\n~ Type your answer to the questions by inputting A, B or C.\n~ We will then recommend music genres and music artists we think you will like!")
 
+def error():
+    print("\nPlease type a valid input or type 'help' for instructions.")
+
+
 # Question 1 - fav mood of music? (energetic, calming, melancholy)
 while True:
     q1 = input("\nHow do you like to feel when you listen to music?\na) Energetic\nb) Calm\nc) Melancholy\n")
-    lq1 = q1.lower()
-    if lq1 == "a":
+    if q1.lower() == "a":
         p1+=1
         break
-    elif lq1 == "b":
+    elif q1.lower() == "b":
         p2+=1
         break
-    elif lq1 == "c":
+    elif q1.lower() == "c":
         p3+=1
         break
-    elif lq1 == "help":
+    elif q1.lower() == "help":
         help_menu()
     else:
-        print("\nPlease type a valid input or type 'help' for instructions.")
+        error()
+
 
 #Question 2 - Where do you mostly listen to music? - (bus ride, gym, sleep)
 while True:
     q2 = input("\nWhere do you mostly listen to music?\na) Bus/Car ride\nb) Gym\nc) Sleep\n")
-    lq2 = q2.lower()
-    if lq2 == "a":
+    if q2.lower() == "a":
         p3 += 1
         break
-    elif lq2 == "b":
+    elif q2.lower() == "b":
         p1 += 1
         break
-    elif lq2 == "c":
+    elif q2.lower() == "c":
         p2 += 1
         break
-    elif lq2 == "help":
+    elif q2.lower() == "help":
         help_menu()
     else:
-        print("\nPlease type a valid input or type 'help' for instructions.")
+        error()
 
 # Question 3 - What is your favorite comfort food? - (pizza, ice cream, mac and cheese)
 while True:
     q3 = input("\nWhat is your favorite comfort food?\na) Pizza\nb) Ice Cream\nc) Mac and Cheese\n")
-    lq3 = q3.lower()
-    if lq3 == "a":
+    if q3.lower() == "a":
         p1 += 1
         break
-    elif lq3 == "b":
+    elif q3.lower() == "b":
         p3 += 1
         break
-    elif lq3 == "c":
+    elif q3.lower() == "c":
         p2 += 1
         break
-    elif lq3 == "help":
+    elif q3.lower() == "help":
         help_menu()
     else:
-        print("\nPlease type a valid input or type 'help' for instructions.")
+        error()
 
 # Question 4 - Which country do you want to visit? - (Japan, Brazil, Greece)
 while True:
@@ -80,7 +82,7 @@ while True:
     elif lq4 == "help":
         help_menu()
     else:
-        print("\nPlease type a valid input or type 'help' for instructions.")
+        error()
 
 # Question 5 - What is your favorite type of weather? - (rain, sunny, snow)
 while True:
@@ -98,7 +100,7 @@ while True:
     elif lq5 == "help":
         help_menu()
     else:
-        print("\nPlease type a valid input or type 'help' for instructions.")
+        error()
 
 # Question 6 - Ideal weekend plans? - (stay at home, night out with friend, shopping)
 while True:
@@ -116,7 +118,7 @@ while True:
     elif lq6 == "help":
         help_menu()
     else:
-        print("\nPlease type a valid input or type 'help' for instructions.")
+        error()
 
 # Question 7 - Favorite drink? - (water, OJ, coffee)
 while True:
@@ -134,7 +136,7 @@ while True:
     elif lq7 == "help":
         help_menu()
     else:
-        print("\nPlease type a valid input or type 'help' for instructions.")
+        error()
 
 # Question 8 - Favorite leisure activity? - (gaming, sleeping, hiking)
 while True:
@@ -152,7 +154,7 @@ while True:
     elif lq8 == "help":
         help_menu()
     else:
-        print("\nPlease type a valid input or type 'help' for instructions.")
+        error()
 
 # Question 9 - What time of day do you most like to listen? - (morning, afternoon, evening)
 while True:
@@ -170,7 +172,7 @@ while True:
     elif lq9 == "help":
         help_menu()
     else:
-        print("\nPlease type a valid input or type 'help' for instructions.")
+        error()
 
 # Question 10 - Pick an animal. - (giraffe, owl, dolphin)
 while True:
@@ -188,14 +190,13 @@ while True:
     elif lq10 == "help":
         help_menu()
     else:
-        print("\nPlease type a valid input or type 'help' for instructions.")
+        error()
 
 
 # final score calculations and results
-# FINISH THE RESULTSSS!!!!!!!!!!!!!
 if p1 > p2 and p1 > p3:
-    print("\n You should look at energetic types of music!\n\n Artists:\n- Travis Scott\n- KAYTRANADA\n- Yeat\n")
+    print("\n You should look at the EDM genre!\n\n Artists like:\n- Calvin Harris\n- KAYTRANADA\n- David Guetta\n")
 if p2 > p1 and p2 > p3:
-    print("\n You should look at calm types of music!")
+    print("\n You should look at the bedroom pop genre!\n\n Artists like:\n- beabadoobee\n- Laufey\n- Clairo\n")
 if p3 > p1 and p3 > p2:
-    print("\n You should look at melancholy types of music!")
+    print("\n You should look at the R&B genre!\n\n Artists like:\n- SZA\n- Brent Faiyaz\n- Mary J Blige\n")
